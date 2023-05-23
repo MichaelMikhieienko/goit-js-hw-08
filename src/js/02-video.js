@@ -1,8 +1,8 @@
 import Vimeo from '@vimeo/player';
-import { throttle } from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 
 const iframe = document.getElementById('vimeo-player');
-const player = new Vimeo.Player(iframe);
+const player = new Vimeo(iframe);
 
 player.on('timeupdate', throttle(function(event) {
     const currentTime = event.seconds;
@@ -23,6 +23,3 @@ if (savedTime) {
         }
     });
 }
-
-
-

@@ -31,6 +31,6 @@ const galleryMarkup = createGalleryMarkup(galleryItems);
 const container = document.querySelector('.gallery');
 container.innerHTML = galleryMarkup;
 
-const lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a', {captionDelay: 250, captionsData: 'alt'});
 
 
